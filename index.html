@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button class="open-button" onclick="openForm()">New Employee</button>
+
+    <table id="employees">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Employee ID</th>
+                <th>Department</th>
+                <th>Email ID</th>
+                <th>Date of Joining</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <div class="form-popup" id="myForm">
+        <form action="" class="form-container">
+            <h1>Login</h1>
+
+            <label for="name"><b>Name</b></label>
+            <input id="name" type="text" placeholder="Enter Name" name="name" required>
+
+            <label for="emp_id"><b>Employee ID</b></label>
+            <input id="emp_id" type="text" placeholder="Enter Employee ID" name="emp_id" required>
+
+            <label for="department"><b>Department</b></label>
+            <input id="department" placeholder="Enter Department" list="depart" name="department" required>
+            <datalist id="depart">
+                <option value="Computer Science">
+                <option value="Civil">
+                <option value="Electronics">
+                <option value="Chemical">
+                <option value="Mechanical">
+            </datalist>
+            <br>
+
+            <label for="email"><b>Email</b></label>
+            <input id="email" type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="doj"><b>Date of Joining</b></label>
+            <input id="doj" type="date" name="doj" required>
+
+            <button type="submit" class="btn" onclick="add()">Submit</button>
+            <button type="button" class="btn cancel" onclick="clear_input()">Clear</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!-- Name - text field
+Employee ID - text field.
+Department - dropdown , add any five values.
+Email Id - text
+Date of Joining(DOJ) - add calendar to select date.
+Submit Details - a button to submit data.
+Clear - a button to clear form data. -->
